@@ -1,0 +1,13 @@
+AI Tool Usage Summary
+
+AI tools (ChatGPT) were used during this assignment to help with:
+
+- Understanding how to design a durable workflow execution engine
+- Clarifying step idempotency, crash recovery, and zombie step handling
+- Designing the SQLite schema and handling concurrency safely
+- Using CompletableFuture for parallel step execution
+- Debugging issues related to resume, sequence generation, and crashes
+- Improving CLI clarity and making execution flow easy to understand
+- Writing and refining README documentation
+
+All suggestions were reviewed and implemented manually.
