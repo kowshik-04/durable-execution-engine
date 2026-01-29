@@ -74,10 +74,10 @@ mvn clean package
 java -jar target/durable-execution-engine-1.0-SNAPSHOT.jar
 ```
 Menu options (from app/Main.java):
-1) Start workflow from beginning — deletes prior state, runs clean.
-2) Resume existing workflow — reuses `workflow.id` and DB state.
-3) Start NEW workflow and simulate crash — pick a step ID to crash at; restart with option 2 to observe recovery.
-4) View workflow state — prints `step_key` and `status` from SQLite.
+1) Start workflow from beginning - deletes prior state, runs clean.
+2) Resume existing workflow - reuses `workflow.id` and DB state.
+3) Start NEW workflow and simulate crash - pick a step ID to crash at; restart with option 2 to observe recovery.
+4) View workflow state - prints `step_key` and `status` from SQLite.
 5) Exit.
 
 Example crash demo:
@@ -92,10 +92,10 @@ Example crash demo:
 - Tests: `mvn test` (JUnit 5; add cases under `**/*Test.java`).
 
 ## Project Layout
-- app/ — CLI entrypoint and crash simulator.
-- engine/ — core engine (DurableContext, SqliteDurableStore, StepExecutor, StepRecord, StepStatus).
-- examples/onboarding/ — EmployeeOnboardingWorkflow demonstrating sequential + parallel steps.
-- db/schema.sql — schema reference; SQLite DB materializes as `engine.db` at runtime.
+- app/ - CLI entrypoint and crash simulator.
+- engine/ - core engine (DurableContext, SqliteDurableStore, StepExecutor, StepRecord, StepStatus).
+- examples/onboarding/ - EmployeeOnboardingWorkflow demonstrating sequential + parallel steps.
+- db/schema.sql - schema reference; SQLite DB materializes as `engine.db` at runtime.
 
 ## Extending the Engine
 - Create a workflow: implement a class that accepts `DurableContext ctx` and call `ctx.step("logicalName", fn)` for each step.
